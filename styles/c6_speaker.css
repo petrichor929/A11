@@ -45,46 +45,49 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
-nav ul {
+#nav_menu ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	position: relative;
 }
 
-nav ul li {
+#nav_menu ul li {
 	float: left;
 }
 
-nav ul li a {
+#nav_menu ul li a {
 	display: block;
 	width: 160px;
 	box-sizing: border-box;
 	text-align: center;
-	padding: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	text-decoration: none;
 	background-color: #800000;
 	color: white;
 	font-weight: bold;
 }
 
-.current {
+#nav_menu ul li a.current {
 	color: yellow;
 }
-
-nav ul ul {
+/* the style for the submenu */
+#nav_menu ul ul {
 	display: none;
 	position: absolute;
 	top: 100%;
 }
 
-nav ul li:hover ul {
-	display: block;
-	font-size: 80%;
-	font-weight: bold;
+#nav_menu ul ul li {
+	float: none;
 }
 
-#nav_menu ::after {
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+
+#nav_menu > ul::after {
 	content: "";
 	clear: both;
 	display: block;
